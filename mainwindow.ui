@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1085</width>
+    <height>602</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1085</width>
+    <height>602</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Учет работы автотранспортного предприятия</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="toolButtonStyle">
+   <enum>Qt::ToolButtonIconOnly</enum>
+  </property>
+  <property name="documentMode">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1085</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="defaultUp">
+    <bool>false</bool>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menuReferences">
+    <property name="title">
+     <string>Справочники</string>
+    </property>
+    <addaction name="actionDrivers"/>
+    <addaction name="actionMotorTransport"/>
+    <addaction name="actionRoutes"/>
+    <addaction name="separator"/>
+    <addaction name="actionEmployedDrivers"/>
+    <addaction name="actionVehiclesMileage"/>
+    <addaction name="actionTravelSheets"/>
+    <addaction name="separator"/>
+    <addaction name="actionOtherWorkers"/>
+    <addaction name="actionCheckInWorkTime"/>
+    <addaction name="actionEmployedOtherWorkers"/>
+   </widget>
+   <widget class="QMenu" name="menuDocuments">
+    <property name="title">
+     <string>Документы</string>
+    </property>
+    <addaction name="actionTravelSheet"/>
+   </widget>
+   <widget class="QMenu" name="menuReports">
+    <property name="title">
+     <string>Отчеты</string>
+    </property>
+    <addaction name="actionRegisterTravelSheets"/>
+    <addaction name="actionSummaryLogByBrand"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Помощь</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="separator"/>
+    <addaction name="actionAboutProgram"/>
+   </widget>
+   <addaction name="menuReferences"/>
+   <addaction name="menuDocuments"/>
+   <addaction name="menuReports"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionDrivers">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/Drivers.png</normaloff>:/images/Drivers.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Водители</string>
+   </property>
+  </action>
+  <action name="actionMotorTransport">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/MotorTransport.png</normaloff>:/images/MotorTransport.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Автотранспорт</string>
+   </property>
+  </action>
+  <action name="actionOtherWorkers">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/OtherWorkers.png</normaloff>:/images/OtherWorkers.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Другие работники</string>
+   </property>
+  </action>
+  <action name="actionRoutes">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/Routes.png</normaloff>:/images/Routes.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Маршруты</string>
+   </property>
+  </action>
+  <action name="actionTravelSheet">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/TravelSheet.png</normaloff>:/images/TravelSheet.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Путевой лист</string>
+   </property>
+   <property name="toolTip">
+    <string>Travel sheet</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/HelpBook.png</normaloff>:/images/HelpBook.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Справка</string>
+   </property>
+  </action>
+  <action name="actionAboutProgram">
+   <property name="text">
+    <string>&amp;О программе</string>
+   </property>
+  </action>
+  <action name="actionEmployedDrivers">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/ЕmployedDrivers.png</normaloff>:/images/ЕmployedDrivers.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Отработанное время водителей</string>
+   </property>
+  </action>
+  <action name="actionVehiclesMileage">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/VehicleMileage.png</normaloff>:/images/VehicleMileage.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Пробег автотранспорта</string>
+   </property>
+  </action>
+  <action name="actionTravelSheets">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/TravelSheets.png</normaloff>:/images/TravelSheets.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Путевые листы</string>
+   </property>
+  </action>
+  <action name="actionEmployedOtherWorkers">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/EmployedOtherWorkers.png</normaloff>:/images/EmployedOtherWorkers.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Отработанное время других работников</string>
+   </property>
+  </action>
+  <action name="actionRegisterTravelSheets">
+   <property name="text">
+    <string>&amp;Журнал регистрации путевых листов</string>
+   </property>
+  </action>
+  <action name="actionSummaryLogByBrand">
+   <property name="text">
+    <string>&amp;Сводный журнал по автотранспорту</string>
+   </property>
+   <property name="toolTip">
+    <string>Сводный журнал по маркам</string>
+   </property>
+  </action>
+  <action name="actionCheckInWorkTime">
+   <property name="icon">
+    <iconset resource="AccountingWorkMTE.qrc">
+     <normaloff>:/images/WorkTimeTracking.png</normaloff>:/images/WorkTimeTracking.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Регистрация рабочего времени</string>
+   </property>
+   <property name="toolTip">
+    <string>Регистрация рабочего времени</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="AccountingWorkMTE.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionDrivers</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showDriversForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMotorTransport</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showMotorTransportForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRoutes</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showRoutesForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEmployedDrivers</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showEmployedDriversForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionVehiclesMileage</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showVehiclesMileageForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTravelSheets</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTravelSheetsForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOtherWorkers</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showOtherWorkersForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCheckInWorkTime</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showCheckInWorkTimeForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEmployedOtherWorkers</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showEmployedOtherWorkersForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTravelSheet</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showTravelSheetForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRegisterTravelSheets</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showRegisterTravelSheetsForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAboutProgram</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showAboutProgramForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSummaryLogByBrand</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showSummaryLogByBrandForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHelp</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>showHelpForm()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>showDriversForm()</slot>
+  <slot>showMotorTransportForm()</slot>
+  <slot>showRoutesForm()</slot>
+  <slot>showEmployedDriversForm()</slot>
+  <slot>showVehiclesMileageForm()</slot>
+  <slot>showTravelSheetsForm()</slot>
+  <slot>showOtherWorkersForm()</slot>
+  <slot>showCheckInWorkTimeForm()</slot>
+  <slot>showEmployedOtherWorkersForm()</slot>
+  <slot>showTravelSheetForm()</slot>
+  <slot>showRegisterTravelSheetsForm()</slot>
+  <slot>showSummaryLogByBrandForm()</slot>
+  <slot>showHelpForm()</slot>
+  <slot>showAboutProgramForm()</slot>
+ </slots>
+</ui>

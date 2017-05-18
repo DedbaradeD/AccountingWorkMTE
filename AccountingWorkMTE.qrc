@@ -1,0 +1,21 @@
+<RCC>
+	<qresource>
+		<file>images/Background.jpg</file>
+		<file>images/Drivers.png</file>
+		<file>images/MotorTransport.png</file>
+		<file>images/Routes.png</file>
+		<file>images/ЕmployedDrivers.png</file>
+		<file>images/VehicleMileage.png</file>
+		<file>images/TravelSheets.png</file>
+		<file>images/OtherWorkers.png</file>
+		<file>images/WorkTimeTracking.png</file>
+		<file>images/EmployedOtherWorkers.png</file>
+		<file>images/TravelSheet.png</file>
+		<file>images/HelpBook.png</file>
+		<file>images/Add.png</file>
+		<file>images/Remove.png</file>
+		<file>images/Search.png</file>
+		<file>images/Refresh.png</file>
+		<file>images/AboutProgram.png</file>
+	</qresource>
+</RCC>
